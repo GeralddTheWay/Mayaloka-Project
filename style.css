@@ -1,0 +1,319 @@
+/* Variables for theme colors */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --accent-color: #f2f7ff;
+    --dark-color: #2c3e50;
+    --light-color: #ffffff;
+    --text-color: #4a4a4a;
+    --radius: 12px;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset and general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+img, video {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+header {
+    background-color: var(--light-color);
+    padding: 1.2rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;   /* Ini yang bikin sticky */
+    top: 0;             /* Stick di paling atas */
+    z-index: 100;       /* Supaya tidak tertutup elemen lain */
+}
+
+
+header h1 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+header nav a {
+    color: var(--dark-color);
+    margin: 0 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0, 0, 30, 0.5), rgba(0, 0, 60, 0.7)),
+                url('https://via.placeholder.com/1600x800') no-repeat center/cover;
+    color: var(--light-color);
+    text-align: center;
+    padding: 6rem 2rem;
+    border-bottom: 8px solid var(--primary-color);
+}
+
+#hero h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.85rem 2rem;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+    background-color: var(--light-color);
+}
+
+section:nth-child(even) {
+    background-color: var(--accent-color);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Service Cards */
+.service-cards, .pricing-cards {
+    display: grid;
+    margin: 30px;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.service-card, .pricing-card {
+    background-color: var(--light-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.2rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service-card:hover, .pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-card img {
+    width: 70px;
+    margin-bottom: 1rem;
+}
+
+/* Pricing Section */
+.pricing-card {
+    border-top: 4px solid transparent;
+}
+
+.pricing-card.basic {
+    border-top-color: var(--dark-color) ;
+}
+
+.pricing-card.premium {
+    border-top-color: var(--primary-color);
+    background: linear-gradient(135deg, #ffffff, #eaf4ff);
+}
+
+.pricing-card ul {
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 0.95rem;
+    margin: 1rem 0;
+}
+
+.pricing-card button {
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    width: 100%;
+    transition: 0.3s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pricing-card button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Contact Form */
+form {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    padding: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 0.85rem;
+    border-radius: var(--radius);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+}
+
+/* Navbar Modern Premium */
+.navbar {
+    background: linear-gradient(to right, #0066cc, #002f6c);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+/* Container untuk isi navbar */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    width: auto;
+    height: 70px;
+    transform: scale(2.2);
+    object-fit: contain;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu a:hover {
+    color: #00eaff;
+    border-color: #00eaff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 0.8rem;
+    }
+
+    .logo {
+        height: 80px;   /* ⚠ Tetap besar tapi tidak merusak layout */
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 0.7rem;
+        padding-bottom: 1rem;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+        padding: 0.4rem 0;
+    }
+    .nav-menu a:hover {
+    color: #00eaff;
+    border-color: #00eaff;
+    transform: translateY(-2px);
+}
+    form button:hover {
+    background-color: var(--secondary-color);
+}
+}
+
+
+
+p.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
