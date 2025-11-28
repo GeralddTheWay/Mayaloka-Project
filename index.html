@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasa Pembuatan Website Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,31 +28,89 @@
         <div class="container hero-content">
             <h2>Bangun Website Profesional untuk Bisnis Anda</h2>
             <p>Kami menyediakan layanan pembuatan website yang menarik, cepat, dan responsif untuk meningkatkan citra bisnis Anda.</p>
-            <a href="#contact" class="btn-primary">Hubungi Kami Sekarang</a>
+            <a href="#contact" class="btn-primary" id="services" >Hubungi Kami Sekarang</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="container">
+    <section  class="container service">
         <h3>Layanan Kami</h3>
         <div class="service-cards">
             <div class="service-card">
-                <img src="https://via.placeholder.com/100" alt="Website Company Profile">
+                <i class="fa-solid fa-display service-icon"></i>
                 <h4>Website Company Profile</h4>
-                <p>Cocok untuk perusahaan atau personal yang ingin tampil profesional secara online.</p>
+                <p>Pembuatan website company profile profesional dengan tampilan modern, informatif, dan mudah dikelola.</p>
             </div>
             <div class="service-card">
-                <img src="https://via.placeholder.com/100" alt="Toko Online">
-                <h4>Toko Online</h4>
-                <p>Kami buatkan website e-commerce yang memudahkan penjualan produk Anda.</p>
+                <i class="fa-solid fa-object-group service-icon"></i>
+                <h4>Desain UI/UX Website</h4>
+                <p>Layanan desain UI/UX modern yang clean, rapi, dan fokus pada pengalaman pengguna.</p>
             </div>
             <div class="service-card">
-                <img src="https://via.placeholder.com/100" alt="Landing Page">
-                <h4>Landing Page</h4>
-                <p>Landing page khusus untuk promosi produk atau kampanye marketing.</p>
+                <i class="fas fa-globe service-icon"></i>
+                <h4>Hosting & Domain Setup</h4>
+                <p>Pengaturan hosting dan domain dari awal hingga website siap online.</p>
             </div>
         </div>
     </section>
+
+    <section class="promo-section">
+    <div class="promo-container">
+
+        <!-- Gambar kiri -->
+        <div class="promo-image">
+            <img src="https://i.pinimg.com/1200x/d2/40/90/d24090ade80e660bd23fe9c2d91dfb73.jpg" alt="Business Website">
+        </div>
+
+        <!-- Teks kanan -->
+        <div class="promo-text">
+            <h2 class="promo-title">Mengapa Harus Di Mayaloka Digital?</h2>
+
+            <!-- Accordion Single Items -->
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span class="acc-icon">+</span>
+                    <p>Tampilan Website Modern</p>
+                </div>
+                <div class="acc-content">
+                    <p>Website kamu akan memiliki desain modern, bersih, dan profesional. Tampilan yang fresh membantu meningkatkan kepercayaan pengunjung dan membuat bisnis terlihat lebih kredibel serta up-to-date dengan perkembangan zaman.</p>
+                </div>
+            </div>
+
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span class="acc-icon">+</span>
+                    <p>Mudah Dikelola</p>
+                </div>
+                <div class="acc-content">
+                    <p>Website dibuat dengan struktur yang sederhana dan mudah dipahami. Kamu bisa mengubah tulisan, gambar, atau konten kapan saja tanpa harus mengerti coding.</p>
+                </div>
+            </div>
+
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span class="acc-icon">+</span>
+                    <p>Cocok untuk Segala Jenis Bisnis</p>
+                </div>
+                <div class="acc-content">
+                    <p>Baik untuk UMKM, personal branding, toko online kecil, usaha lokal, hingga perusahaan — desain kami fleksibel dan bisa disesuaikan dengan kebutuhan bisnismu.</p>
+                </div>
+            </div>
+
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span class="acc-icon">+</span>
+                    <p>Responsive Mobile</p>
+                </div>
+                <div class="acc-content">
+                    <p>Website tampil sempurna di semua perangkat: smartphone, tablet, dan laptop. Pengunjung tetap nyaman melihat kontenmu kapan pun dan dari perangkat apa pun.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
     <!-- Promo Video Section -->
     <section id="video" class="container">
@@ -60,10 +119,11 @@
             <source src="video-placeholder.mp4" type="video/mp4">
             Browser Anda tidak mendukung video tag.
         </video>
+        <p id="pricing"></p>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="container">
+    <section  class="container">
         <h3>Paket Harga</h3>
         <div class="pricing-cards">
             <div class="pricing-card basic">
@@ -89,8 +149,17 @@
         </div>
     </section>
 
+    <section class="container map">
+        <h3>Alamat Kami</h3>
+        <p style="text-align: center;">Jl. Raya Sesetan No.235, Sesetan, Denpasar Selatan, Kota Denpasar, Bali</p>
+        <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.8927677728725!2d115.21714177432179!3d-8.701732588666854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241994e6bf9a3%3A0x67771ade9d2bae4a!2sMayaloka%20Digital!5e0!3m2!1sid!2sid!4v1764262156762!5m2!1sid!2sid" width="1200" height="450" style="border:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p id="contact"></p>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="container">
+    <section class="container">
         <h3>Hubungi Kami</h3>
         <p class="info">Siap memulai proyek? Kirim pesan melalui form berikut:</p >
         <form>
@@ -102,7 +171,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Mayaloka Web Studio. All Rights Reserved.</p>
+        <p>&copy; 2026 Mayaloka Web Studio. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
